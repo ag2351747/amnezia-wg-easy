@@ -98,7 +98,7 @@ These options can be configured by setting environment variables using `-e KEY="
 | `WG_PORT` | `51820` | `12345` | The public UDP port of your VPN server. AmneziaWG will listen on that (othwise default) inside the Docker container. |
 | `WG_MTU` | `null` | `1420` | The MTU the clients will use. Server uses default WG MTU. |
 | `WG_PERSISTENT_KEEPALIVE` | `0` | `25` | Value in seconds to keep the "connection" open. If this value is 0, then connections won't be kept alive. |
-| `WG_DEFAULT_ADDRESS` | `10.8.0.x` | `10.6.0.x` | Clients IP address range. |
+| `WG_DEFAULT_ADDRESS` | `10.28.0.x` | `10.6.0.x` | Clients IP address range. |
 | `WG_DEFAULT_DNS` | `1.1.1.1` | `8.8.8.8, 8.8.4.4` | DNS server clients will use. If set to blank value, clients will not use any DNS. |
 | `WG_ALLOWED_IPS` | `0.0.0.0/0, ::/0` | `192.168.15.0/24, 10.0.1.0/24` | Allowed IPs clients will use. |
 | `WG_PRE_UP` | `...` | - | See [config.js](/src/config.js#L21) for the default value. |
@@ -126,7 +126,7 @@ To update to the latest version, simply run:
 ```bash
 docker stop amnezia-wg-easy
 docker rm amnezia-wg-easy
-docker pull ghcr.io/spcfox/amnezia-wg-easy
+docker pull ghcr.io/ag2351747/amnezia-wg-easy
 ```
 
 And then run the `docker run -d \ ...` command above again.
